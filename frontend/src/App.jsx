@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
+import JoinRoom from './pages/joinRoom'
 
 function App() {
   return (
     <>
-      <div className='flex flex-col h-screen justify-center items-center'>
-        Hello
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<JoinRoom />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
